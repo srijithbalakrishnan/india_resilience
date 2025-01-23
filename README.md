@@ -27,7 +27,7 @@ Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook
      <img src="graphics/elsevier/CompositeIndex_all_districts.png" alt="Resilience Map" width="700">
 
    - ### **Download data:**  
-       - [District-level compisite resilience indices](data/composite_resilience_indices.parquet): District-level composite index values for all resilience pillars (use geopandas).
+       - [District-level composite resilience indices](data/composite_resilience_indices.parquet): District-level composite index values for all resilience pillars (use geopandas).
 
 ### 2. **Resilience and Vulnerability Data**
 
@@ -71,10 +71,10 @@ Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook
 
 This repository presents a framework for assessing district-level hazard-resilience profiles by integrating resilience indicators and hazard characteristics.
 
-- **Composite resilience indicators:**
+- **Composite resilience indices:**
 
     Relevant features were identified from government datasets, surveys, and open-source databases.
-    Features were standardized and combined into composite resilience indicators using Principal Component Analysis (PCA) to reduce dimensionality and uncover patterns.
+    Features were standardized and combined into composite resilience indices using Principal Component Analysis (PCA) to reduce dimensionality and uncover patterns.
 
  - **Hazard risk analysis**:
 
