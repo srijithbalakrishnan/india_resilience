@@ -16,6 +16,8 @@ This is a joint work by researchers at the Delft University of Technology and th
 
 # Results and Data
 
+Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook file)
+
 ## 1. **Composite Resilience Indices**
    - ### **Description:**  
      Composite indices for district-level territorial resilience are calculated across five key pillars:  
