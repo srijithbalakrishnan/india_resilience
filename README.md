@@ -60,10 +60,12 @@ Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook
    - ### **Description:**  
 
      A focused analysis on cyclone-prone districts along India's eastern and western coasts. This case study integrates the resilience framework with cyclone hazard data to classify districts into clusters based on their resilience profiles.  
-       - Clustering algorithms applied: K-Means, Agglomerative Clustering, and others.  
-       - Key outputs include resilience patterns, spatial distributions of clusters, and recommendations for resource allocation.  
+       - Clustering algorithm: Agglomerative clustering  
+       - Key outputs include resilience patterns and spatial distributions of clusters.  
 
    - ### **Clustering of cyclone-prone districts based on resilience capabilities**
+
+    The northern parts of the eastern coast contain several districts with high cyclone risks, coinciding with low resilience capacities.
 
      <img src="graphics/combined_cluster_plots.png" alt="Resilience Data2" width="950">
 
