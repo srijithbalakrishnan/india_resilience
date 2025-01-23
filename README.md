@@ -9,10 +9,12 @@ body {
 
 This repository contains the open-source data, methodology, and results from the study on district-level resilience patterns in India. The study develops composite indices and resilience profiles based on a five-pillar framework, leveraging geospatial tools and clustering algorithms to identify resilience patterns and inform policy interventions. All 733 districts in India are covered.
 
-This is a joint work by researchers at the Delft University of Technology and the Indian Insititue of Technology Kanpur. Researchers are free to use the data published in the repository for their work.
+This work is led by researchers at the Delft University of Technology and the Indian Insititue of Technology Kanpur. Researchers are free to use the data published in the repository for their work.
 
-<!-- If you use this repository in your research or projects, please cite the original study as follows:  
-> Srijith Balakrishnan, Shivam Srivastava, Chirag Kothari. "Decoding Territorial Resilience Patterns in India", Working Paper. *(2025)*. -->
+This is an ongoing work and more data will be added.
+
+If you use this repository in your research or projects, please cite the original study as follows:  
+> Srijith Balakrishnan, Shivam Srivastava, Chirag Kothari. "Decoding Territorial Resilience Patterns in India", Working Paper, in preparation. *(2025)*.
 
 # Results and Data
 
