@@ -1,10 +1,3 @@
-  <style>
-  body {
-      font-family: "Lato", sans-serif;
-      font-size: 16px;
-  }
-  </style>
-
 # India District-level Resilience Data
 
 This repository contains the open-source data, methodology, and results from the study on district-level resilience patterns in India. The study develops composite indices and resilience profiles based on a five-pillar framework, leveraging geospatial tools and clustering algorithms to identify resilience patterns and inform policy interventions. All 733 districts in India are covered.
