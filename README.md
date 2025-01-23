@@ -1,9 +1,9 @@
-<style>
-body {
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-}
-</style>
+  <style>
+  body {
+      font-family: "Lato", sans-serif;
+      font-size: 16px;
+  }
+  </style>
 
 # India District-level Resilience Data
 
