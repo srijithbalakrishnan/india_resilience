@@ -9,12 +9,12 @@ This is an ongoing work and more data and analyses will be added.
 If you use data from this repository in your research or projects, please cite the original study as follows:  
 > Srijith Balakrishnan, Shivam Srivastava, Chirag Kothari. "Decoding Territorial Resilience Patterns in India", Working Paper, in preparation. *(2025)*.
 
-# Results and Data
+## Results and Data
 
 Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook file). For queries and suggestions on raw data, processing, and further analysis, contact the author.
 
-## 1. **Composite Resilience Indices**
-   - ### **Description:**  
+### 1. **Composite Resilience Indices**
+   - ### *Description:*  
      Composite indices for district-level territorial resilience are calculated across five key pillars:  
        - **Critical Infrastructure:** Infrastructure density and robustness (e.g., road and power transmission density).  
        - **Social Infrastructure:** Availability of facilities such as schools, healthcare centers, and police stations.  
@@ -22,51 +22,52 @@ Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook
        - **Infrastructure Service Access:** Access to electricity, sanitation, clean water, and clean cooking fuel.  
        - **State Capacity:** Governance indicators such as public safety, economic governance, and public health.  
    
-   - ### **Composite index maps**
+   - ### *Composite index maps*
 
      <img src="graphics/elsevier/CompositeIndex_all_districts.png" alt="Resilience Map" width="700">
 
    - ### **Download data:**  
        - [District-level compisite resilience indices](data/composite_resilience_indices.parquet): District-level composite index values for all resilience pillars (use geopandas).
 
-## 2. **Resilience and Vulnerability Data**
-   - ### **Description:**  
+### 2. **Resilience and Vulnerability Data**
+
+   - ### *Description:** 
      This section includes the raw and processed datasets used to compute resilience and vulnerability indicators. These datasets are critical for replicating the analysis and are categorized as follows:  
        - Resilience indicators (e.g., literacy rates, health infrastructure density).  
        - Vulnerability indicators (e.g., underweight children, low BMI). 
 
-   - ### **Data Sources**    
+   - ### *Data Sources*   
 
      The district-level resilience and vulnerability data have been collated/derived from various datasets including OpenStreetMap, ESRI India, UDISE+ (Ministry of Education, Government of India), State economic censuses and budget documents, National Family Health Survey 5 (Ministry of Heath and Family Welfare, Government of India), and Good Governance Index (Department of Administrative Reforms and Public Grievances, Government of India). Please find the data dictionary along with the sources [here](data/resilience_data_dictionary.pdf).
    
 
-   - ### **District-level feature maps**
+   - ### *District-level feature maps*
 
      <img src="graphics/combined_plot_pillars1.png" alt="Resilience Data1" width="750">
      <img src="graphics/combined_plot_pillars2.png" alt="Resilience Data2" width="750">
 
-   - ### **Download data (pre-processed)**
+   - ### *Download data (pre-processed)*
 
        - [District-level resilience features](data/resilience_data.parquet): District-level data for all resilience indicators (use geopandas).  
        - [District-level indicators (using Standard scaler function)](data/resilience_indicators.parquet): District-level indicators (standardized features; use geopandas).
        - [Data dictionary](data/resilience_data_dictionary.pdf): Detailed description of all features and their sources.
 
-## 3. **Case Study: Resilience Patterns in Cyclone-Prone Districts**
+### 3. **Case Study: Resilience Patterns in Cyclone-Prone Districts**
 
-   - ### **Description:**  
+   - ### *Description:* 
 
      A focused analysis on cyclone-prone districts along India's eastern and western coasts. This case study integrates the resilience framework with cyclone hazard data to classify districts into clusters based on their resilience profiles.  
        - Clustering algorithm: Agglomerative clustering  
        - Key outputs include resilience patterns and spatial distributions of clusters.  
 
-   - ### **Clustering of cyclone-prone districts based on resilience capabilities**
+   - ### *Clustering of cyclone-prone districts based on resilience capabilities*
 
      The northern parts of the eastern coast contain several districts with high cyclone risks, coinciding with low resilience capacities.
 
      <img src="graphics/combined_cluster_plots.png" alt="Resilience Data2" width="950">
 
 
-# Methods
+## Methods
 
 This repository presents a framework for assessing district-level hazard-resilience profiles by integrating resilience indicators and hazard characteristics.
 
@@ -88,6 +89,6 @@ This repository presents a framework for assessing district-level hazard-resilie
   <img src="graphics/Resilience Disaggregation.png" alt="Methodology" width="1050">
 
 
-# Contact
+## Contact
 
    - For more details, contact Srijith Balakrishnan. Email: s.balakrishnan@tudelft.nl
