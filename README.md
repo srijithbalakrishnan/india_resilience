@@ -82,7 +82,7 @@ This repository presents a framework for assessing district-level hazard-resilie
     Relevant features were identified from government datasets, surveys, and open-source databases.
     Features were standardized and combined into composite resilience indicators using Principal Component Analysis (PCA) to reduce dimensionality and uncover patterns.
 
- - **Hazar risk index**:
+ - **Hazard risk analysis**:
 
     Spatial analysis was conducted to create a district-level composite hazard index, focusing on hazard characteristics.
 
