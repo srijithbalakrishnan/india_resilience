@@ -13,7 +13,7 @@ This work is led by researchers at the Delft University of Technology and the In
 
 This is an ongoing work and more data and analyses will be added.
 
-If you use this repository in your research or projects, please cite the original study as follows:  
+If you use data from this repository in your research or projects, please cite the original study as follows:  
 > Srijith Balakrishnan, Shivam Srivastava, Chirag Kothari. "Decoding Territorial Resilience Patterns in India", Working Paper, in preparation. *(2025)*.
 
 # Results and Data
