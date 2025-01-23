@@ -16,7 +16,7 @@ This is a joint work by researchers at the Delft University of Technology and th
 
 # Results and Data
 
-Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook file)
+Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook file). For queries on raw data, processing, and further analysis, contact the author.
 
 ## 1. **Composite Resilience Indices**
    - ### **Description:**  
