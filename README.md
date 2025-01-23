@@ -74,7 +74,7 @@ The core of the methodology lies in the development of a comprehensive set of in
 
   <img src="graphics/Resilience Disaggregation.png" alt="Methodology" width="1050">
 
-<!-- 
+
 ## 4. Contact
 
-   - For more details, contact Srijith Balakrishnan. Email: s.balakrishnan@tudelft.nl -->
+   - For more details, contact Srijith Balakrishnan. Email: s.balakrishnan@tudelft.nl
