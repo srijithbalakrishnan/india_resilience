@@ -65,7 +65,7 @@ Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook
 
    - ### **Clustering of cyclone-prone districts based on resilience capabilities**
 
-    The northern parts of the eastern coast contain several districts with high cyclone risks, coinciding with low resilience capacities.
+     The northern parts of the eastern coast contain several districts with high cyclone risks, coinciding with low resilience capacities.
 
      <img src="graphics/combined_cluster_plots.png" alt="Resilience Data2" width="950">
 
