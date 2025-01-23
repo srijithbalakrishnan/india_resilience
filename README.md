@@ -31,7 +31,7 @@ Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook
 
      <img src="graphics/elsevier/CompositeIndex_all_districts.png" alt="Resilience Map" width="700">
 
-   - ### **Data for download:**  
+   - ### **Download data:**  
        - [District-level compisite resilience indices](data/composite_resilience_indices.parquet): District-level composite index values for all resilience pillars (use geopandas).
 
 ## 2. **Resilience and Vulnerability Data**
