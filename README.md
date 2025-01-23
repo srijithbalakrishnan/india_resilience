@@ -11,7 +11,7 @@ This repository contains the open-source data, methodology, and results from the
 
 This work is led by researchers at the Delft University of Technology and the Indian Insititue of Technology Kanpur. Researchers are free to use the data published in the repository for their work.
 
-This is an ongoing work and more data will be added.
+This is an ongoing work and more data and analyses will be added.
 
 If you use this repository in your research or projects, please cite the original study as follows:  
 > Srijith Balakrishnan, Shivam Srivastava, Chirag Kothari. "Decoding Territorial Resilience Patterns in India", Working Paper, in preparation. *(2025)*.
