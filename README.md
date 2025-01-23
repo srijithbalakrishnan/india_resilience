@@ -86,7 +86,7 @@ This repository presents a framework for assessing district-level hazard-resilie
     Distinct resilience patterns for hazard-prone regions were identified using clustering algorithms.
     This comprehensive framework supports spatially informed resilience planning for hazard-prone areas.
 
-  <img src="graphics/Resilience Disaggregation.png" alt="Methodology" width="1050">
+  <!-- <img src="graphics/Resilience Disaggregation.png" alt="Methodology" width="1050"> -->
 
 
 ## Contact
