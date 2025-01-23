@@ -53,6 +53,7 @@ Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook
    - ### **Download data (pre-processed)**
 
        - [District-level resilience features](data/resilience_data.parquet): District-level data for all resilience indicators (use geopandas).  
+       - [District-level indicators (using Standard scaler function)](data/resilience_indicators.parquet): District-level indicators (standardized features; use geopandas).
        - [Data dictionary](data/resilience_data_dictionary.pdf): Detailed description of all features and their sources.
 
 ## 3. **Case Study: Resilience Patterns in Cyclone-Prone Districts**
@@ -72,11 +73,26 @@ Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook
 
 # Methods
 
-The core of the methodology lies in the development of a comprehensive set of indicators based on a five-pillar framework to reflect the multidimensional nature of territorial resilience. These pillars include critical infrastructure, social infrastructure, community, infrastructure service access, and state capacity. For each pillar, we identified relevant features from various sources, including government datasets, surveys, and open-source databases. These features are then standardized and integrated into composite resilience indicators using principal component analysis (PCA), a robust statistical technique for reducing dimensionality and identifying underlying patterns in the data. The remaining stages of the framework build upon this resilience framework. The first step involves gathering and processing the datasets required to develop the resilience indicators. The third step, which is performed parallel to the first two steps, focused on the spatial analysis of hazard characteristics and the development of district-level composite hazard index. Finally, we integrated the resilience indicators with the hazard index to develop district-level hazard-resilience profiles. Using these profiles, we developed distinct resilience patterns that are unique to the hazard-prone regions using appropriate clustering algorithms.
+This repository presents a framework for assessing district-level hazard-resilience profiles by integrating resilience indicators and hazard characteristics.
+
+- **Composite resilience indicators:**
+
+    Relevant features were identified from government datasets, surveys, and open-source databases.
+    Features were standardized and combined into composite resilience indicators using Principal Component Analysis (PCA) to reduce dimensionality and uncover patterns.
+
+ - **Hazar risk index**:
+
+    Spatial analysis was conducted to create a district-level composite hazard index, focusing on hazard characteristics.
+
+ - **Integration and Clustering**:
+
+    Resilience indicators and the hazard index were integrated to develop district-level hazard-resilience profiles.
+    Distinct resilience patterns for hazard-prone regions were identified using clustering algorithms.
+    This comprehensive framework supports spatially informed resilience planning for hazard-prone areas.
 
   <img src="graphics/Resilience Disaggregation.png" alt="Methodology" width="1050">
 
 
-## 4. Contact
+# Contact
 
    - For more details, contact Srijith Balakrishnan. Email: s.balakrishnan@tudelft.nl
