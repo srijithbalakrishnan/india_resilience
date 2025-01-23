@@ -18,7 +18,7 @@ If you use this repository in your research or projects, please cite the origina
 
 # Results and Data
 
-Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook file). For queries on raw data, processing, and further analysis, contact the author.
+Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook file). For queries and suggestions on raw data, processing, and further analysis, contact the author.
 
 ## 1. **Composite Resilience Indices**
    - ### **Description:**  
