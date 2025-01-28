@@ -76,7 +76,7 @@ Complete analysis can be found [here](india_resilience_analysis.ipynb) (Jupyter 
 
    - **Clustering of cyclone-prone districts based on resilience capabilities**
 
-     Key insights: Districts in Cluster 0 has above average capabilities across all resilience pillars. Cluster 6 needs focus on all the five pillars. The northern parts of the eastern coast contain several districts with high cyclone risks, coinciding with low resilience capacities.
+     Key insights: Most districts in Cluster 0 has above average capabilities across all resilience pillars. Most districts in Cluster 6 need focus on enahncing strenth across all the five pillars. The northern parts of the eastern coast contain several districts with high cyclone risks, coinciding with low resilience capacities.
 
      <img src="graphics/combined_cluster_plots.png" alt="Resilience Data2" width="950">
 
