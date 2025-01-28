@@ -24,7 +24,7 @@ Complete analysis can be found [here](india_resilience_analysis.ipynb) (Jupyter 
    
    - **Composite index maps**
 
-     All indices are derived by applying Principal Component Analysis (PCA) to normalized resilience and vulnerability features (using standard scaling). A positive value indicates capabilities above the national average, while a negative value indicates a score below the national average.
+     All indices are derived by applying Principal Component Analysis (PCA) on normalized resilience and vulnerability features (using standard scaling). A positive value indicates capabilities above the national average, while a negative value indicates a score below the national average.
 
      <img src="graphics/elsevier/CompositeIndex_all_districts.png" alt="Resilience Map" width="700">
 
