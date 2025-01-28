@@ -11,7 +11,7 @@ If you use data from this repository in your research or projects, please cite t
 
 ## Results and Data
 
-Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook file). For queries and suggestions on raw data, processing, and further analysis, contact the author.
+Complete analysis can be found [here](india_resilience_analysis.ipynb) (Jupyter notebook). For queries and suggestions on raw data, processing, and further analysis, contact the author.
 
 ### 1. **Composite Resilience Indices**
    - **Description:**  
@@ -29,7 +29,13 @@ Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook
      <img src="graphics/elsevier/CompositeIndex_all_districts.png" alt="Resilience Map" width="700">
 
    - **Download data:**  
-       - [District-level composite resilience indices](data/composite_resilience_indices.parquet): District-level composite index values for all resilience pillars (use geopandas).
+
+       - [District-level composite resilience indices](data/composite_resilience_indices.parquet): District-level composite index values for all resilience pillars. To read the file, use ```geopandas```.
+
+        ```
+        import geopandas as gpd
+        gdf = gpd.read_parquet(<parquet_file>.parquet)
+        ```
 
 ### 2. **Resilience and Vulnerability Data**
 
