@@ -49,6 +49,7 @@ Complete analysis can be found [here](india_resilience_analysis.ipynb) (notebook
      <img src="graphics/combined_plot_pillars2.png" alt="Resilience Data2" width="750">
 
   - **Correlation among vulnerability and resilience characteristics**
+     
      Correlation analysis was done using Kendall's rank correlation ($\tau$). 
 
      <img src="graphics/indicators_corr.png" alt="Indicator correlation" width="1000">
