@@ -1,10 +1,10 @@
 # India District-Level Infrastructure and Community Vulnerability Data
 
-This repository contains open-source data, methodology, and results from a study on district-level infrastructure access, availability, and community vulnerability in India. The study develops **composite indicators** for critical, essential, and social infrastructure systems, and examines their spatial associations with community vulnerability across **733 districts** using spatial regression and clustering analysis.  
+This repository contains open-source data, methodology, and results from a study on district-level infrastructure access, availability, and community vulnerability in India. The study develops composite indicators for critical, essential, and social infrastructure systems, and examines their spatial associations with community vulnerability across 733 districts using spatial regression and clustering analysis.  
 
-The analysis identifies **distinct infrastructure profiles** that explain spatial inequalities in vulnerability and provides insights for **equitable and targeted infrastructure investments**.
+The analysis identifies distinct infrastructure profiles that explain spatial inequalities in vulnerability and provides insights for equitable and targeted infrastructure investments.
 
-This work is a collaboration between researchers at **Delft University of Technology** and the **Indian Institute of Technology Kanpur**. Researchers are encouraged to use the data published in this repository for research and policy analysis.
+<!-- This work is a collaboration between researchers at Delft University of Technology and the Indian Institute of Technology Kanpur. Researchers are encouraged to use the data published in this repository for research and policy analysis. -->
 
 If you use this repository in your research or projects, please cite the original study as follows:  
 
