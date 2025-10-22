@@ -18,10 +18,10 @@ If you use this repository in your research or projects, please cite the origina
 
 Composite indicators for district-level infrastructure characteristics and community vulnerability are calculated across four dimensions:  
 
-- **Critical Infrastructure (CI₍crit₎):** Availability of key physical systems such as road networks, energy grids, and transport connectivity.  
-- **Essential Utility Access (CI₍ess₎):** Household-level access to electricity, drinking water, sanitation, and clean cooking fuel.  
-- **Social Infrastructure (CI₍soc₎):** Density of educational, health, and safety facilities such as schools, hospitals, and police stations.  
-- **Community Vulnerability (CI₍comm₎):** Composite index representing socioeconomic sensitivity, exposure, and adaptive capacity indicators.  
+- **Critical Infrastructure ($CI_{crit}$):** Availability of key physical systems such as road networks, energy grids, and transport connectivity.  
+- **Essential Utility Access ($CI_{ess}$):** Household-level access to electricity, drinking water, sanitation, and clean cooking fuel.  
+- **Social Infrastructure ($CI_{soc}$):** Density of educational, health, and safety facilities such as schools, hospitals, and police stations.  
+- **Community Vulnerability ($CI_{comm}$):** Composite index representing socioeconomic sensitivity, exposure, and adaptive capacity indicators.  
 
 #### 1.1.1 Composite Indicator Maps
 
