@@ -19,12 +19,16 @@ from sklearn.metrics import (
 )
 from sklearn.model_selection import KFold
 import matplotlib.pyplot as plt
-from scipy.spatial.distance import cdist
 from scipy.cluster.hierarchy import dendrogram, linkage
 from matplotlib.gridspec import GridSpec
-from sklearn.utils.estimator_checks import check_estimator
 
-from kneed import KneeLocator
+import matplotlib.patches as mpatches
+from matplotlib.colors import LinearSegmentedColormap
+import seaborn as sns
+import matplotlib.gridspec as gridspec
+from matplotlib.ticker import AutoMinorLocator
+from cartopy import crs as ccrs
+import pypalettes
 
 
 def kmeans_clustering_analysis(
@@ -452,17 +456,18 @@ def affinity_propagation_analysis(
     damping=0.5,
     n_splits=5,
     random_state=42,
-    num_clusters=None,
     normalize=False,
 ):
     """
     Perform Affinity Propagation clustering analysis with cross-validation.
+    Automatically selects the optimal number of clusters using silhouette score.
 
     Parameters:
     data: DataFrame/array of features
-    preference_range: tuple of (min, max) preferences to try
+    preference_range: tuple of (min, max) preferences to try (optional)
     damping: damping factor (default 0.5)
     n_splits: number of cross-validation splits (default 5)
+    normalize: whether to standardize data (default False)
 
     Returns:
     dict: Results, metrics, and optimal clusters
@@ -510,17 +515,12 @@ def affinity_propagation_analysis(
                 n_clusters = len(np.unique(labels))
 
                 if n_clusters > 1:  # Metrics need at least 2 clusters
-                    silhouette = silhouette_score(
-                        val_data, clustering.predict(val_data)
-                    )
-                    calinski = calinski_harabasz_score(
-                        val_data, clustering.predict(val_data)
-                    )
+                    silhouette = silhouette_score(val_data, clustering.predict(val_data))
+                    calinski = calinski_harabasz_score(val_data, clustering.predict(val_data))
                 else:
-                    silhouette = 0
+                    silhouette = -1  # Invalid score if only 1 cluster
                     calinski = 0
 
-                # Collect results for each split
                 n_clusters_list.append(n_clusters)
                 silhouette_scores.append(silhouette)
                 calinski_scores.append(calinski)
@@ -537,22 +537,25 @@ def affinity_propagation_analysis(
         results["calinski_std"].append(np.std(calinski_scores))
         results["n_clusters"].append(np.mean(n_clusters_list))
 
-    # Find optimal number of clusters
-    if num_clusters:
-        optimal_clusters = num_clusters
-    else:
-        optimal_clusters = find_ap_optimal_clusters(results)
-    optimal_pref = preferences[
-        np.argmin(np.abs(np.array(results["n_clusters"]) - optimal_clusters))
-    ]
+    # Find the best preference based on silhouette score (maximize)
+    best_idx = np.argmax(results["silhouette_score"])
+    optimal_pref = results["preference"][best_idx]
+    optimal_clusters = int(round(results["n_clusters"][best_idx]))
 
     # Final clustering with optimal preference
     final_clustering = AffinityPropagation(
-        preference=optimal_pref, damping=damping, random_state=1
+        preference=optimal_pref, damping=damping, random_state=random_state
     )
     final_labels = final_clustering.fit_predict(scaled_data)
 
-    # Plotting results
+    print(
+        f"Optimal preference: {optimal_pref:.2f}\n"
+        f"Optimal clusters: {optimal_clusters}\n"
+        f"Silhouette Score: {results['silhouette_score'][best_idx]:.3f}\n"
+        f"Calinski-Harabasz Score: {results['calinski_score'][best_idx]:.3f}"
+    )
+
+    # Plotting results (optional)
     plot_affinity_propagation_results(results, optimal_clusters)
 
     return {
@@ -562,7 +565,6 @@ def affinity_propagation_analysis(
         "labels": final_labels,
         "final_model": final_clustering,
     }
-
 
 def find_ap_optimal_clusters(results):
     """
@@ -1319,3 +1321,4 @@ def perform_clustering(clustering_method, cluster_df, random_state, num_clusters
     get_silhouette_score(results, num_clusters)
 
     return labels, centroids, num_clusters
+

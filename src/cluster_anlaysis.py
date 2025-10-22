@@ -108,18 +108,31 @@ indicators_dict = {
             "R",
         ],
     },
-    "state_capacity": {
+    # "state_capacity": {
+    #     "Citizen centric governance": ["citizen_governance", 0, 1, "R"],
+    #     "Judiciary and public security": ["public_security", 0, 1, "R"],
+    #     "Commerce and industry": ["commerce_industry", 0, 1, "R"],
+    #     "Human resource development": ["hr_devt", 0, 1, "R"],
+    #     "Public infrastructure and utilities": ["public_infra", 0, 1, "R"],
+    #     "Public health": ["public_health", 0, 1, "R"],
+    #     "Economic governance": ["economic_governance", 0, 1, "R"],
+    #     "Social welfare": ["social_welfare", 0, 1, "R"],
+    #     "Agriculture and allied activities": ["agriculture_allied", 0, 1, "R"],
+    #     "Environment governance": ["env_governance", 0, 1, "R"],
+    #     # "Composite score for governance": ["governance_composite", 0, 10, "R"],
+    # },
+    "state_capacity_social": {
         "Citizen centric governance": ["citizen_governance", 0, 1, "R"],
         "Judiciary and public security": ["public_security", 0, 1, "R"],
-        "Commerce and industry": ["commerce_industry", 0, 1, "R"],
         "Human resource development": ["hr_devt", 0, 1, "R"],
-        "Public infrastructure and utilities": ["public_infra", 0, 1, "R"],
         "Public health": ["public_health", 0, 1, "R"],
-        "Economic governance": ["economic_governance", 0, 1, "R"],
         "Social welfare": ["social_welfare", 0, 1, "R"],
+    },
+    "state_capacity_economic": {
+        "Commerce and industry": ["commerce_industry", 0, 1, "R"],
+        "Public infrastructure and utilities": ["public_infra", 0, 1, "R"],
+        "Economic governance": ["economic_governance", 0, 1, "R"],
         "Agriculture and allied activities": ["agriculture_allied", 0, 1, "R"],
-        "Environment governance": ["env_governance", 0, 1, "R"],
-        # "Composite score for governance": ["governance_composite", 0, 10, "R"],
     },
 }
 
@@ -129,7 +142,9 @@ indicators_key_dict = {
     "infrastructure_accessibility": "Infrastructure service accessibility",
     "social_infrastructure": "Social infrastructure",
     "critical_infrastructure": "Critical infrastructure",
-    "state_capacity": "State capacity",
+    # "state_capacity": "State capacity",
+    "state_capacity_social": "State capacity (social)",
+    "state_capacity_economic": "State capacity (economic)",
 }
 
 

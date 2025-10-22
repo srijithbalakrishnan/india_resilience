@@ -99,15 +99,43 @@ indicators_dict = {
         "Maximum storm surge (m)": ["pmss_m", 0, -1, "H"],
         "Maximum precipitation (cm)": ["pmp_cm", 0, -1, "H"],
     },
+   
     "critical_infrastructure": {
         # "Road length (km)": ["roadlen_km", 0, -1, "R"],
-        # "Highway density (km per 100 sqkm)": ["highway_per_100sqkm", 0, -1, "R"],
+        "Highway density (km per 100 sqkm)": ["highway_per_100sqkm", 0, -1, "R"],
         "Road density (km per 100 sqkm)": ["roads_100sqkm", 0, -1, "R"],
         # "Power line length (km)": ["powerlen_km", 0, -1, "R"],
         "Transmission line density (km per 100 sqkm)": [
             "transmission_100sqkm",
             0,
             -1,
+            "R",
+        ],
+        "Percentage groundwater extraction (%)": [
+            "perc_extraction",
+            0,
+            -1,
+            "V",
+        ],
+    },
+    "infrastructure_accessibility": {
+        "Households with electricity (%)": ["perc_hh_electricity", 0, 100, "R"],
+        "Households with improved sanitation facility (%)": [
+            "perc_hh_sanitation",
+            0,
+            100,
+            "R",
+        ],
+        "Households with improved drinking water source (%)": [
+            "perc_hh_drinkingwater",
+            0,
+            100,
+            "R",
+        ],
+        "Households with clean fuel for cooking (%)": [
+            "perc_hh_cleanfuel",
+            0,
+            100,
             "R",
         ],
     },
@@ -136,18 +164,25 @@ indicators_dict = {
             -1,
             "R",
         ],
+        # "Households with health insurance/financial schemes (%)": [
+        #     "perc_social_security",
+        #     0,
+        #     100,
+        #     "R",
+        # ],
     },
-    "community": {
+    
+     "community": {
         "Per capita income (INR '000)": ["per_capita_income", 0, -1, "R"],
-        "Population <15 yrs (%)": ["perc_minors", 0, 100, "V"],
+        # "Population <15 yrs (%)": ["perc_minors", 0, 100, "V"],
         "Women (age 15-49) who are literate (%)": ["perc_women_literate", 0, 100, "R"],
-        "Fully-vaccinated children aged 12-23 months (%)": [
-            "perc_child_vaccinated",
-            0,
-            100,
-            "R",
-        ],
-        "Underweight Children <5 yrs (%)": [
+        # "Fully-vaccinated children aged 12-23 months (%)": [
+        #     "perc_child_vaccinated",
+        #     0,
+        #     100,
+        #     "R",
+        # ],
+        "Underweight children <5 yrs (%)": [
             "perc_child_uweight",
             0,
             100,
@@ -159,55 +194,57 @@ indicators_dict = {
             100,
             "V",
         ],
-        "Households with health insurance/financial schemes (%)": [
-            "perc_social_security",
+        "Women (age 15-49) who are anaemic (%)": [
+            "perc_women_aneamic",
             0,
             100,
-            "R",
+            "V",
         ],
+        # "Men age 15 years and above with Moderately or severely elevated blood pressure (Systolic ≥160 mm of Hg and/or Diastolic ≥100 mm of Hg) (%)": [
+        #     "perc_men_highbp",
+        #     0,
+        #     100,
+        #     "V",
+        # ],
     },
-    "infrastructure_accessibility": {
-        "Households with electricity (%)": ["perc_hh_electricity", 0, 100, "R"],
-        "Households with improved sanitation facility (%)": [
-            "perc_hh_sanitation",
-            0,
-            100,
-            "R",
-        ],
-        "Households with improved drinking water source (%)": [
-            "perc_hh_drinkingwater",
-            0,
-            100,
-            "R",
-        ],
-        "Households with clean fuel for cooking (%)": [
-            "perc_hh_cleanfuel",
-            0,
-            100,
-            "R",
-        ],
-    },
-    "state_capacity": {
-        "Citizen centric governance": ["citizen_governance", 0, 1, "R"],
-        "Judiciary and public security": ["public_security", 0, 1, "R"],
-        "Commerce and industry": ["commerce_industry", 0, 1, "R"],
-        "Human resource development": ["hr_devt", 0, 1, "R"],
-        "Public infrastructure and utilities": ["public_infra", 0, 1, "R"],
-        "Public health": ["public_health", 0, 1, "R"],
-        "Economic governance": ["economic_governance", 0, 1, "R"],
-        "Social welfare": ["social_welfare", 0, 1, "R"],
-        "Agriculture and allied activities": ["agriculture_allied", 0, 1, "R"],
-        "Environment governance": ["env_governance", 0, 1, "R"],
-        # "Composite score for governance": ["governance_composite", 0, 10, "R"],
-    },
+    # "state_capacity": {
+    #     "Citizen centric governance": ["citizen_governance", 0, 1, "R"],
+    #     "Judiciary and public security": ["public_security", 0, 1, "R"],
+    #     "Commerce and industry": ["commerce_industry", 0, 1, "R"],
+    #     "Human resource development": ["hr_devt", 0, 1, "R"],
+    #     "Public infrastructure and utilities": ["public_infra", 0, 1, "R"],
+    #     "Public health": ["public_health", 0, 1, "R"],
+    #     "Economic governance": ["economic_governance", 0, 1, "R"],
+    #     "Social welfare": ["social_welfare", 0, 1, "R"],
+    #     "Agriculture and allied activities": ["agriculture_allied", 0, 1, "R"],
+    #     "Environment governance": ["env_governance", 0, 1, "R"],
+    #     # "Composite score for governance": ["governance_composite", 0, 10, "R"],
+    # },
+    # "state_capacity_social": {
+    #     "Citizen centric governance": ["citizen_governance", 0, 1, "R"],
+    #     "Judiciary and public security": ["public_security", 0, 1, "R"],
+    #     "Human resource development": ["hr_devt", 0, 1, "R"],
+    #     "Public health": ["public_health", 0, 1, "R"],
+    #     "Social welfare": ["social_welfare", 0, 1, "R"],
+    # },
+    # "state_capacity_economic": {
+    #     "Commerce and industry": ["commerce_industry", 0, 1, "R"],
+    #     "Public infrastructure and utilities": ["public_infra", 0, 1, "R"],
+    #     "Economic governance": ["economic_governance", 0, 1, "R"],
+    #     "Agriculture and allied activities": ["agriculture_allied", 0, 1, "R"],
+    # },
 }
 
 indicators_key_dict = {
-    "hazard": "Hazard characteristics (Cyclones)",
-    "social_infrastructure": "Social Infrastructure resilience indicators",
-    "critical_infrastructure": "Critical Infrastructure resilience indicators",
-    "community": "Community resilience indicators",
-    "state_capacity": "Governance indices (State capacity)",
+    "hazard": "Hazard",
+    "critical_infrastructure": "Critical infrastructure\navailability",
+    
+    "infrastructure_accessibility": "Household essential\nutility access",
+    "social_infrastructure": "Social infrastructure\ndensity",
+    "community": "Community\nvulnerability",
+    # "state_capacity": "State capacity",
+    # "state_capacity_social": "State capacity (social)",
+    # "state_capacity_economic": "State capacity (economic)",
 }
 
 

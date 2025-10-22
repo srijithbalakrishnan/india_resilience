@@ -1,108 +1,92 @@
-# India District-level Resilience Data
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+</style>
 
-This repository contains the open-source data, methodology, and results from the study on district-level resilience patterns in India. The study develops composite indices and resilience profiles based on a five-pillar framework, leveraging geospatial tools and clustering algorithms to identify resilience patterns and inform policy interventions. All 733 districts in India are covered.
+## India District-level Infrastructure and Community Vulnerability Data
 
-This work is led by researchers at the Delft University of Technology and the Indian Insititue of Technology Kanpur. You are free to use the data published in the repository for your work.
+This repository contains the open-source data, methodology, and results from the study on district-level infrastructure access, availability, and community vulnerability in India. The study develops composite indicators for critical, essential, and social infrastructure systems, and examines their spatial associations with community vulnerability across 733 districts using spatial regression and clustering analysis.  
 
-This is an ongoing work and more data and analyses will be added.
+The analysis identifies distinct infrastructure profiles that explain spatial inequalities in vulnerability and provides insights for equitable and targeted infrastructure investments.
 
-If you use data from this repository in your research or projects, please cite the original study as follows:  
-> Srijith Balakrishnan, Shivam Srivastava, Chirag Kothari. "Decoding Territorial Resilience Patterns in India", Working Paper, in preparation. *(2025)*.
+This work is a collaboration between researchers at Delft University of Technology and the Indian Institute of Technology Kanpur. Researchers are encouraged to use the data published in this repository for research and policy analysis.
+
+If you use this repository in your research or projects, please cite the original study as follows:  
+> Balakrishnan, S., S., Shivam and Kothari, C., *Empirical Evidence for Synergistic Influence of Regional Infrastructure Availability and  Access on Community Vulnerability*. Available at SSRN: https://ssrn.com/abstract=5475572 (Preprint).
 
 ## Results and Data
 
-Complete analysis can be found [here](india_resilience_analysis.ipynb) (Jupyter notebook). For queries and suggestions on raw data, processing, and further analysis, contact the author.
+### 1. Composite Indicators
 
-### 1. **Composite Resilience Indices**
-   - **Description:**  
-     Composite indices for district-level territorial resilience are calculated across five key pillars:  
-       - **Critical Infrastructure:** Infrastructure density and robustness (e.g., road and power transmission density).  
-       - **Social Infrastructure:** Availability of facilities such as schools, healthcare centers, and police stations.  
-       - **Community Resilience:** Socioeconomic characteristics, literacy, vaccination, and household-level financial resilience.  
-       - **Infrastructure Service Access:** Access to electricity, sanitation, clean water, and clean cooking fuel.  
-       - **State Capacity:** Governance indicators such as public safety, economic governance, and public health.  
+  Composite indicators for district-level infrastructure characteristics and community vulnerability are calculated across four dimensions:  
+       - **Critical Infrastructure ($CI_{crit}$):** Availability of key physical systems such as road networks, energy grids, and transport connectivity.  
+       - **Essential Utility Access ($CI_{ess}$):** Household-level access to electricity, drinking water, sanitation, and clean cooking fuel.  
+       - **Social Infrastructure ($CI_{soc}$):** Density of educational, health, and safety facilities such as schools, hospitals, and police stations.  
+       - **Community Vulnerability ($CI_{comm}$):** Composite index representing socioeconomic sensitivity, exposure, and adaptive capacity indicators.  
    
-   - **Composite index maps**
+   - #### Composite indicator maps
+     All composite indicators are derived by applying Principal Component Analysis (PCA) on normalized infrastructure and community features (using standard scaling). A positive value indicates capabilities above the national average, while a negative value indicates a score below the national average.
 
-     All indices are derived by applying Principal Component Analysis (PCA) on normalized resilience and vulnerability features (using standard scaling). A positive value indicates capabilities above the national average, while a negative value indicates a score below the national average.
+     <img src="graphics/InfraIndex.png" alt="Composite infrastrucutre indicators" width="750">
+     <img src="graphics/CommunityIndex.png" alt="Composite community indicators" width="255">
 
-     <img src="graphics/elsevier/CompositeIndex_all_districts.png" alt="Resilience Map" width="700">
+   - #### Data for download:  
+       - [District-level composite infrastructure and vulnerability indices](data/composite_resilience_indices.parquet): District-level composite index values for all infrastructure dimensions and vulnerability (use geopandas).
 
-   - **Download data:**  
+       > import geopandas as gpd
+       > gdf = gpd.read_parquet(<parquet_file>.parquet)
 
-       - [District-level composite resilience indices](data/composite_resilience_indices.parquet): District-level composite index values for all resilience pillars. To read the file, use ```geopandas```.
+### 2. Infrastructure and Vulnerability Data
 
-        ```
-        import geopandas as gpd
-        gdf = gpd.read_parquet(<parquet_file>.parquet)
-        ```
+  This section includes the raw and processed datasets used to compute infrastructure and vulnerability indicators. These datasets form the basis for reproducing the spatial analysis and include:  
+  - Infrastructure indicators (e.g., road density, hospital availability, utility service coverage).  
+  - Vulnerability indicators (e.g., literacy, household composition, and financial resilience).  
 
-### 2. **Resilience and Vulnerability Data**
+  #### Data Sources
 
-   - **Description:** 
-     This section includes the raw and processed datasets used to compute resilience and vulnerability indicators. These datasets are critical for replicating the analysis and are categorized as follows:  
-       - Resilience indicators (e.g., literacy rates, health infrastructure density).  
-       - Vulnerability indicators (e.g., underweight children, low BMI). 
-
-   - **Data Sources**   
-
-     The district-level resilience and vulnerability data have been collated/derived from various datasets including OpenStreetMap, ESRI India, UDISE+ (Ministry of Education, Government of India), State economic censuses and budget documents, National Family Health Survey 5 (Ministry of Heath and Family Welfare, Government of India), and Good Governance Index (Department of Administrative Reforms and Public Grievances, Government of India). Please find the data dictionary along with the sources [here](data/resilience_data_dictionary.pdf).
+  The district-level infrastructure and vulnerability data were compiled and derived from multiple national and open datasets, including OpenStreetMap, ESRI India, UDISE+ (Ministry of Education, Government of India), State economic censuses and budget documents, and National Family Health Survey 5 (Ministry of Health and Family Welfare, Government of India). Please refer to the data dictionary for complete metadata and feature definitions: [data/resilience_data_dictionary.pdf](data/resilience_data_dictionary.pdf).
    
+  #### District-level feature maps
 
-   - **District-level feature maps**
+  <img src="graphics/combined_plot_pillars1.png" alt="Infrastructure Data1" width="750">
+  <img src="graphics/combined_plot_pillars2.png" alt="Infrastructure Data2" width="750">
 
-     <img src="graphics/combined_plot_pillars1.png" alt="Resilience Data1" width="750">
-     <img src="graphics/combined_plot_pillars2.png" alt="Resilience Data2" width="750">
+  #### Correlation among vulnerability and resilience characteristics
 
-  - **Correlation among vulnerability and resilience characteristics**
-     
-     Correlation analysis was done using Kendall's rank correlation ($\tau$). 
+  Correlation analysis was done using Kendall's rank correlation ($\tau$).
+  <img src="graphics/indicators_corr.png" alt="Infrastructure Data2" width="800">
 
-     <img src="graphics/indicators_corr.png" alt="Indicator correlation" width="1000">
+  #### Download data (pre-processed)
 
-   - **Download data (pre-processed)**
+  - [District-level infrastructure and vulnerability features](data/resilience_data.parquet): District-level dataset for all indicators (use geopandas).  
+  - [Data dictionary](data/resilience_data_dictionary.pdf): Detailed description of all indicators and data sources.
 
-       - [District-level resilience features](data/resilience_data.parquet): District-level data for all resilience indicators (use geopandas).  
-       - [District-level indicators (using Standard scaler function)](data/resilience_indicators.parquet): District-level indicators (standardized features; use geopandas).
-       - [Data dictionary](data/resilience_data_dictionary.pdf): Detailed description of all features and their sources.
+### 3. Cluster Analysis: Infrastructure and Vulnerability Profiles
+ 
+  Districts are grouped into six distinct clusters based on shared infrastructure and vulnerability characteristics. The clustering integrates spatial regression outputs and composite indicators to reveal inter-district similarities and disparities in access, availability, and social infrastructure.  
+  - Clustering method: Agglomerative Hierarchical Clustering algorithm (validated with silhouette and Calinski–Harabasz indices).  
+  - Outputs include spatial cluster maps and average infrastructure profiles per cluster to guide equitable infrastructure planning.  
 
-### 3. **Case Study: Resilience Patterns in Cyclone-Prone Districts**
+    #### Spatial infrastructure–vulnerability profiles
+     The staitsital distributions of infrastructure characcteristics were obtained and mapped to understand the unique infrastructure profiles and spatial disparities.
 
-   - **Description:** 
-
-     A focused analysis on cyclone-prone districts along India's eastern and western coasts. This case study integrates the resilience framework with cyclone hazard data to classify districts into clusters based on their resilience profiles.  
-       - Clustering algorithm: Agglomerative clustering  
-       - Key outputs include resilience patterns and spatial distributions of clusters.  
-
-   - **Clustering of cyclone-prone districts based on resilience capabilities**
-
-     Key insights: Most districts in Cluster 0 has above average capabilities across all resilience pillars. Most districts in Cluster 6 need focus on enahncing strenth across all the five pillars. The northern parts of the eastern coast contain several districts with high cyclone risks, coinciding with low resilience capacities.
-
-     <img src="graphics/combined_cluster_plots.png" alt="Resilience Data2" width="950">
+     <img src="graphics/combined_cluster_plots.png" alt="Cluster Profiles" width="900">
 
 
 ## Methods
 
-This repository presents a framework for assessing district-level hazard-resilience profiles by integrating resilience indicators and hazard characteristics.
+The methodological framework integrates spatial econometric modeling with composite indicator analysis to capture multidimensional infrastructure–vulnerability linkages.  
 
-- **Composite resilience indices**
+Four main stages are followed:
+1. **Indicator development:** High-resolution geospatial, demographic, and infrastructural datasets are processed and standardized to construct composite indicators representing critical, essential (utility-based), and social infrastructure dimensions, as well as community vulnerability.  
+2. **Spatial analysis:** A spatial lag model (SLM) is used to quantify both direct and spillover associations between infrastructure characteristics and community vulnerability, explicitly accounting for spatial dependence across neighboring districts.  
+3. **Cluster analysis:** The resulting marginal effects are aggregated and analyzed through clustering to identify typologies of infrastructure access and availability, highlighting spatial inequalities and informing resource allocation priorities. 
+4. **Statistical modelling:** The association between community vulnerability and infrastructure dimensions were statistically emanied by applying linear regression on the composite indicators. 
 
-    Relevant features were identified from government datasets, surveys, and open-source databases.
-    Features were standardized and combined into composite resilience indices using Principal Component Analysis (PCA) to reduce dimensionality and uncover patterns.
-
- - **Hazard risk analysis**
-
-    Spatial analysis was conducted to create a district-level composite hazard index, focusing on hazard characteristics.
-
- - **Integration and Clustering**
-
-    Resilience indicators and the hazard index were integrated to develop district-level hazard-resilience profiles.
-    Distinct resilience patterns for hazard-prone regions were identified using clustering algorithms.
-    This comprehensive framework supports spatially informed resilience planning for hazard-prone areas.
-
-  <!-- <img src="graphics/Resilience Disaggregation.png" alt="Methodology" width="1050"> -->
+  <img src="graphics/Resilience Disaggregation.jpeg" alt="Methodology" width="600">
 
 
-## Contact
+### Contact
 
    - For more details, contact Srijith Balakrishnan. Email: s.balakrishnan@tudelft.nl
